@@ -123,6 +123,12 @@ b {
     cursor: pointer;
 }
 
+.stories-wrapper {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+}
 
 
 @media only screen and (max-width: 600px){

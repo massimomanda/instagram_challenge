@@ -1,0 +1,10 @@
+<div class="userPics">
+  <div class="imageBackground">
+    <img
+      [routerLink]="['/story-detail', id]"
+      [src]="'https://picsum.photos/500/300?random=' + id"
+      alt=""
+    />
+  </div>
+  <div class="username">{{ username }}</div>
+</div>

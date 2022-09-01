@@ -37,6 +37,7 @@ export class UtilityService {
   users!:any
 
   posts!:any // where our posts are stored
+  
   admin = false;
 
   constructor(private cookies:CookieService, public router:Router, private http :HttpClient)  {
@@ -74,41 +75,41 @@ export class UtilityService {
     // || userNameCookie == "acapuano" && passwordCookie == "Querty1234" || userNameCookie == "mmanda" && passwordCookie == "mmanda" 
     // checkUserCookie = 
 
-    if(this.currentUser ){ // if current user exist log in
-      console.log("Login effettuato")
-      document.cookie=`username=${user};expires=${expires};path=/`;
-      document.cookie=`password=${password};expires=${expires};path=/`;
-      this.router.navigate(['', 'main']); // redirect to the homepage
-      window.alert("Login ok benvenuto "+user); // a wellcome notification
-      this.logged = !this.logged // logged flag
+    // if(this.currentUser ){ // if current user exist log in
+    //   console.log("Login effettuato")
+    //   document.cookie=`username=${user};expires=${expires};path=/`;
+    //   document.cookie=`password=${password};expires=${expires};path=/`;
+    //   this.router.navigate(['', 'main']); // redirect to the homepage
+    //   window.alert("Login ok benvenuto "+user); // a wellcome notification
+    //   this.logged = !this.logged // logged flag
 
-    }
-    else{window.alert("User o password errata")}// notification if the user or password is wrong
+    // }
+    // else{window.alert("User o password errata")}// notification if the user or password is wrong
 
   }
 
-  checkCookies(){
-    const userNameCookie = this.cookies.get('username')
-    const passwordCookie = this.cookies.get('password')
+//   checkCookies(){
+//     const userNameCookie = this.cookies.get('username')
+//     const passwordCookie = this.cookies.get('password')
 
-    if(this.registeredUsers.find(item => item.userName == userNameCookie && item.password == passwordCookie)){
-      this.logged=true
-      this.admin=false
+//     if(this.registeredUsers.find(item => item.userName == userNameCookie && item.password == passwordCookie)){
+//       this.logged=true
+//       this.admin=false
 
-      window.alert("bentornato "+userNameCookie)
-    }
-    if(this.registeredUsers.find(item => item.userName == userNameCookie && item.password == passwordCookie && item.role=="admin")){
-      this.logged=true
-      this.admin=true
+//       window.alert("bentornato "+userNameCookie)
+//     }
+//     if(this.registeredUsers.find(item => item.userName == userNameCookie && item.password == passwordCookie && item.role=="admin")){
+//       this.logged=true
+//       this.admin=true
 
-      window.alert("bentornato Admin "+userNameCookie)
-    }
-  }
-  logout(){
-    this.cookies.deleteAll()
-    window.alert("Logout Effettuato con successo")
-    this.logged=false
-    this.router.navigate(['', 'login']); // redirect to the homepage
-  }
+//       window.alert("bentornato Admin "+userNameCookie)
+//     }
+//   }
+//   logout(){
+//     this.cookies.deleteAll()
+//     window.alert("Logout Effettuato con successo")
+//     this.logged=false
+//     this.router.navigate(['', 'login']); // redirect to the homepage
+//   }
 
 }

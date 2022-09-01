@@ -41,3 +41,16 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# Applications
+*.app
+*.exe
+*.war
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
