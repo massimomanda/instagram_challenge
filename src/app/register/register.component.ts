@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UtilityService } from '../utility.service';
 
@@ -10,11 +10,11 @@ import { UtilityService } from '../utility.service';
 })
 export class RegisterComponent  {
 
-  registerForm = new FormGroup({
+  registerForm = new UntypedFormGroup({
     // numberOrEmail: new FormControl('',Validators.required),
     // nameAndSurname: new FormControl('',Validators.required),
-    userName: new FormControl('',Validators.required),
-    password: new FormControl('',[
+    userName: new UntypedFormControl('',Validators.required),
+    password: new UntypedFormControl('',[
       Validators.required,
       Validators.minLength(8),
     ])

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { UtilityService } from '../utility.service';
 import { posts } from '../models/interfaces';
 
@@ -11,7 +11,7 @@ import { posts } from '../models/interfaces';
 })
 export class NavbarComponent implements OnInit {
 
-  search = new FormControl('')
+  search = new UntypedFormControl('')
 
   constructor(public utility:UtilityService) { }
 

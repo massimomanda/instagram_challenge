@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { UtilityService } from '../utility.service';
 
 @Component({
@@ -10,9 +10,9 @@ import { UtilityService } from '../utility.service';
 export class LoginComponent implements OnInit {
   numberOrEmail!:string
   password!:string
-  loginForm = new FormGroup({
-    numberOrEmail: new FormControl('',Validators.required),
-    password: new FormControl('',[
+  loginForm = new UntypedFormGroup({
+    numberOrEmail: new UntypedFormControl('',Validators.required),
+    password: new UntypedFormControl('',[
       Validators.required,
     // Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/),
       // Validators.minLength(8),
