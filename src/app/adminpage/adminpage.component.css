@@ -1,0 +1,22 @@
+.usersWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px
+}
+
+.registeredUsers{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.removeItem{
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+    top: 1px;
+    right: 1px;
+}

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/instagram_challenge'),
+      dir: require('path').join(__dirname, './coverage/applicazione-post'),
       subdir: '.',
       reporters: [
         { type: 'html' },

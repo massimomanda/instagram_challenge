@@ -1,0 +1,106 @@
+@import url('//fonts.cdnfonts.com/css/billabong');
+
+.registerWrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+.loginContainer{
+    height: 65%;
+    width: 30%;
+    background-color: white;
+    border: 2px solid #F8F8F8;
+    
+}
+.divider{
+    margin: auto;
+    height: 1px;
+    background-color: gray;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+.loginContainerTwo{
+    height: 10%;
+    width: 30%;
+    background-color: white;
+    border: 2px solid #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.loginContainerTwo a{
+    text-decoration: none;
+}
+h3{
+    font-family: "billabong", sans-serif;
+    text-align: center;
+    font-size: 48px;
+    cursor: pointer;
+}
+p{
+    text-align: center;
+    color: rgba(var(--f52,142,142,142),1);
+}
+.inputsContainer{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputsContainer  > input{
+    border: 1 px solid  #F8F8F8;
+    background-color: #F8F8F8;
+}
+input::placeholder{
+    color:rgba(var(--f52,142,142,142),1);
+    font-size: 10px;
+}
+button:disabled{
+    background-color:  rgba(0, 149, 246,0.3);
+}
+button{
+    background-color:  rgb(0, 149, 246);
+    border-radius: 10px;
+    width: 200px;
+    border: none;
+    color: white;
+}
+#iscriviti{
+    margin: auto;
+    font-size: 10px;
+    width: 30%;
+    
+}
+.iscriviContainer{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px){
+    /*Big smartphones [426px -> 600px]*/
+    .loginContainer {
+        margin-top: -300px;
+        height: 25%;
+        width: auto;
+        background-color: white;
+        border: 2px solid #F8F8F8;
+    }
+    .loginContainerTwo{
+        height: 10%;
+        width: auto;
+        background-color: white;
+        border: 2px solid #F8F8F8;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+}
+

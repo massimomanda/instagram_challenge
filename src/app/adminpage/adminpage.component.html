@@ -1,0 +1,10 @@
+<div class="usersWrapper">
+   <div class="registeredUsers" *ngFor="let register of this.utility.registeredUsers;index as i">
+      <div (click)="removeUser(i)" class="removeItem">X</div>
+      <b>Username:</b>  {{register.userName}}
+      <br>
+      <b>Password:</b>  {{register.password}}
+      <br>
+      <b>Role:</b>      {{register.role}}
+   </div>
+</div>

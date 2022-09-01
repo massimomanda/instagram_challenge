@@ -1,0 +1,26 @@
+<div class="registerWrapper">
+    <div class="loginContainer">
+        <h3 routerLink="/main">MandaGram</h3>
+        <form action=""[formGroup]="loginForm" (ngSubmit)="submitOnLoginForm()">
+            <div class="inputsContainer">
+                <div class="inputButton">
+                    <input type="text" formControlName="numberOrEmail" placeholder="Numero di telefono,nome utente email">
+                </div>
+                <div class="inputButton">
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+                <div class="inputButton">
+                    <button type="submit"[disabled]="loginForm.invalid">Accedi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="loginContainerTwo">
+        <div>
+            <span>Non hai un account? </span> <a routerLink="/register">Iscriviti</a> 
+        </div>
+    </div>
+</div>
+
+
+<div></div>
