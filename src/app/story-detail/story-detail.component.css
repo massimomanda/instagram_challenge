@@ -1,3 +1,4 @@
+
 .story-detail {
   height: 100vh;
   width: 100vw;
@@ -13,6 +14,6 @@
 #myBar {
   width: 1%;
   height: 30px;
-  transition: all ease-in-out;
+  transition: all ease-in-out .5s;
   background-color: #04aa6d;
 }
