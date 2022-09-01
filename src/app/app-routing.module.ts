@@ -7,6 +7,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminGuard } from './shared/admin.guard';
 import { AuthGuard } from './shared/auth.guard';
+import { StoryDetailComponent } from './story-detail/story-detail.component';
 import { UserpageComponent } from './userpage/userpage.component';
 
 
@@ -14,6 +15,8 @@ import { UserpageComponent } from './userpage/userpage.component';
 const routes: Routes =  [
   { path: '',   redirectTo: 'main', pathMatch: 'full' }, // redirect to main
   { path: 'main', component: MainComponent },
+  { path: 'story-detail/:id', component: StoryDetailComponent },
+
 //   { path: 'register', component: RegisterComponent },
   { path:'userpage',component:UserpageComponent},
 //   { path: 'login', component: LoginComponent },

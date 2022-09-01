@@ -6,15 +6,32 @@
   flex-direction: column;
 }
 
-.userPics > img {
-  width: 50px;
-  height: 50px;
+img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  border: 4px solid white;
 }
+
+.imageBackground {
+  background: rgb(255, 171, 0);
+  background: linear-gradient(
+    40deg,
+    rgba(255, 171, 0, 1) 0%,
+    rgba(112, 0, 100, 1) 100%
+  );
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .userPics > img:hover {
   cursor: pointer;
 }
 
 .username {
-    font-size: 11px;
+  font-size: 11px;
 }

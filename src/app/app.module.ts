@@ -15,6 +15,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { StoryComponent } from './story/story.component';
+import { StoryDetailComponent } from './story-detail/story-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StoryComponent } from './story/story.component';
     UserpageComponent,
     AdminpageComponent,
     PagenotfoundComponent,
-    StoryComponent
+    StoryComponent,
+    StoryDetailComponent
   ],
   imports: [
     BrowserModule,
