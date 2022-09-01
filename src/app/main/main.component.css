@@ -1,139 +1,144 @@
+.story-container {
+  display: flex;
+  width: inherit;
+}
 
+.post-wrapper {
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+.post-container {
+  display: flex;
+  justify-content: center;
 
-.post-wrapper{
-    width: 100
-    ;
-    display: flex;
-    flex-direction: column;
-    background-color: #F8F8F8;
+  margin: 10px;
 }
-.post-container{
-    display: flex;
-    justify-content: center;
-    
-    margin: 10px;
+.post {
+  width: 30%;
+  padding-bottom: 10px;
+  border: 1px solid lightgray;
 }
-.post{
-    width: 30%;
-    padding-bottom: 10px;
-    border: 1px solid lightgray;
+.postIcons {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 16px;
 }
-.postIcons{
-    display: flex;
-    justify-content:space-between;
-    padding: 6px 16px;
-    
+.commentEmoji:hover {
+  cursor: pointer;
 }
-.commentEmoji:hover{
-    cursor: pointer;
+.icons:hover {
+  cursor: pointer;
 }
-.icons:hover{
-    cursor: pointer;
+svg:hover:not(.likeOn) {
+  fill: #8e8e8e;
+  color: #8e8e8e;
 }
- svg:hover:not(.likeOn){
-    fill: #8e8e8e ;
-    color: #8e8e8e;
-}
-.like:active{
-    fill: #ed4956;
-    color:#ed4956;
+.like:active {
+  fill: #ed4956;
+  color: #ed4956;
 }
 
 /* .likeOn:hover:enabled{
     fill:#262626
 } */
 
-
-
-.iconsLeft{
-    display: flex;
-    gap: 1em;
-    justify-content: space-evenly;
+.iconsLeft {
+  display: flex;
+  gap: 1em;
+  justify-content: space-evenly;
 }
-.imgCont>img{
-    width: 100%;
+.imgCont > img {
+  width: 100%;
 }
-.commentSection{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 16px;
-    margin-top: 6px;
+.commentSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  margin-top: 6px;
 }
 
-.commentButton > span{
-    color: blue;
+.commentButton > span {
+  color: blue;
 }
 Input {
-    width: 100%;;
-    border: none;
+  width: 100%;
+  border: none;
 }
 input:focus {
-    outline: none;
+  outline: none;
 }
-.postHeader{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 4px 14px 16px;
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 4px 14px 16px;
 }
-.userPics > img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.userPics > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
-.userPics> img:hover{
-    cursor: pointer;
+.userPics > img:hover {
+  cursor: pointer;
 }
-.userName:hover{
-    cursor: pointer;
+.userName:hover {
+  cursor: pointer;
 }
-.leftPostHeader{
-    display: flex;
-    align-items: center;
-    gap: 1em;
+.leftPostHeader {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
-#showComments{
-    cursor: pointer;
-    padding: 6px;
+#showComments {
+  cursor: pointer;
+  padding: 6px;
 }
 
 p {
-    padding: 6px;
-    margin-bottom: 0;
+  padding: 6px;
+  margin-bottom: 0;
 }
 b {
-    padding: 6px;
+  padding: 6px;
 }
-.divider{
-    height: 1px;
+.divider {
+  height: 1px;
+  width: auto;
+  margin-top: 6px;
+  background-color: lightgray;
+}
+.commentCont {
+  position: relative;
+}
+
+.deleteComment {
+  position: absolute;
+  text-align: right;
+  top: 1px;
+  right: 1px;
+  cursor: pointer;
+}
+
+.stories-wrapper {
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  .post {
     width: auto;
-    margin-top: 6px;
-    background-color: lightgray;
-}
-.commentCont{
-    position: relative;
-}
-
-.deleteComment{
-    position: absolute;
-    text-align: right;
-    top: 1px;
-    right: 1px;
-    cursor: pointer;
-}
-
-
-
-@media only screen and (max-width: 600px){
-    /*Big smartphones [426px -> 600px]*/
-    .post {
-        width: auto;
-        padding-bottom: 10px;
-        border: 1px solid lightgray;
-    }
-    .inputContainer>input{
-        display: none;
-        visibility: hidden;
-    }
+    padding-bottom: 10px;
+    border: 1px solid lightgray;
+  }
+  .inputContainer > input {
+    display: none;
+    visibility: hidden;
+  }
 }

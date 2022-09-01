@@ -25,16 +25,16 @@ export class RegisterComponent  {
   constructor(public utility:UtilityService,public router:Router) { }
 
 
-  submitOnRegisterForm(){
-    this.utility.registeredUsers.push(this.registerForm.value)
-    localStorage.setItem('registeredUsers', JSON.stringify(this.utility.registeredUsers));
+//   submitOnRegisterForm(){
+//     this.utility.registeredUsers.push(this.registerForm.value)
+//     localStorage.setItem('registeredUsers', JSON.stringify(this.utility.registeredUsers));
     
-    // let prova = localStorage.getItem('user');
+//     // let prova = localStorage.getItem('user');
 
-    console.log(this.registerForm.value,this.utility.registeredUsers)
-    // console.log(prova)
-    // console.log(this.utility.registeredUsers)
-    this.router.navigate(['', 'login']); // redirect to the homepage
-    window.alert("Registrazione avvenuta con successo")
-  }
+//     console.log(this.registerForm.value,this.utility.registeredUsers)
+//     // console.log(prova)
+//     // console.log(this.utility.registeredUsers)
+//     this.router.navigate(['', 'login']); // redirect to the homepage
+//     window.alert("Registrazione avvenuta con successo")
+//   }
 }
