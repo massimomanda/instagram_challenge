@@ -35,9 +35,9 @@ export class NavbarComponent implements OnInit {
     
   }
 
-  onClickLogout(){
-    this.utility.logout()
+//   onClickLogout(){
+//     this.utility.logout()
     
-  }
+//   }
 
 }

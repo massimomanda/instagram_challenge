@@ -14,11 +14,11 @@ import { UserpageComponent } from './userpage/userpage.component';
 const routes: Routes =  [
   { path: '',   redirectTo: 'main', pathMatch: 'full' }, // redirect to main
   { path: 'main', component: MainComponent },
-  { path: 'register', component: RegisterComponent },
+//   { path: 'register', component: RegisterComponent },
   { path:'userpage',component:UserpageComponent},
-  { path: 'login', component: LoginComponent },
+//   { path: 'login', component: LoginComponent },
   { path: 'adminpage', component: AdminpageComponent,  canActivate: [AuthGuard,AdminGuard]},
-  { path: '**', component: PagenotfoundComponent },  //   404 page
+//   { path: '**', component: PagenotfoundComponent },  //   404 page
 ];
 
 @NgModule({

@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   constructor(public utility:UtilityService,public router:Router) { }
 
   ngOnInit(): void {
-    this.utility.checkCookies()
+    // this.utility.checkCookies()
     
     this.utility.getPosts().subscribe((elem)=> this.utility.posts = elem)
     this.utility.getUser().subscribe((param)=>this.utility.users = param)
@@ -34,11 +34,11 @@ export class MainComponent implements OnInit {
 
     
 
-    if(this.utility.logged==false){
-      window.alert("Fai log in per continuare")
+    // if(this.utility.logged==false){
+    //   window.alert("Fai log in per continuare")
 
-      this.router.navigate(['', 'login']);
-    }
+    //   this.router.navigate(['', 'login']);
+    // }
 
   }
 
