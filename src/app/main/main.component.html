@@ -1,12 +1,13 @@
-<div class="post-wrapper">
-  <div class="stories-wrapper">
+<div class="stories-wrapper">
+  <div class="story-container">
     <app-story
       *ngFor="let user of utility.users"
       [id]="user.id"
       [username]="user.username"
     ></app-story>
   </div>
-
+</div>
+<div class="post-wrapper">
   <div
     *ngFor="let post of this.utility.posts; index as i"
     class="post-container"

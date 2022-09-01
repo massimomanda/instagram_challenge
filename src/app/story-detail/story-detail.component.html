@@ -1,5 +1,15 @@
-<div class="story-detail">
-    
+<div
+  class="story-detail"
+  [ngStyle]="{
+    background:
+      'url(https://picsum.photos/id/' +
+      storyId.id +
+      '/200/300) no-repeat 0 0 / cover'
+  }"
+>
+  <div id="myProgress">
+    <div id="myBar" #myBar></div>
+  </div>
 </div>
 
 <!-- [ngStyle]="{'background': 'https://picsum.photos/id/' + picId + '/200/300'}" -->

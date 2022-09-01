@@ -1,7 +1,18 @@
 .story-detail {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    position: absolute;
-    top: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: black; */
+  position: absolute;
+  top: 0;
+}
+#myProgress {
+  width: 100%;
+  background-color: red;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  transition: all ease-in-out;
+  background-color: #04aa6d;
 }

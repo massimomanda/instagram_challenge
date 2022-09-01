@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UtilityService } from 'src/app/utility.service';
 
 @Component({
@@ -8,11 +8,14 @@ import { UtilityService } from 'src/app/utility.service';
   styleUrls: ['./story.component.css'],
 })
 export class StoryComponent implements OnInit {
-  constructor(public utility: UtilityService, private router: Router) {}
+  constructor(
+    public utility: UtilityService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
   @Input('id') id!: number;
   @Input('username') username!: string;
-
-
 
   ngOnInit(): void {}
 }
