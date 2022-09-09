@@ -14,13 +14,14 @@ export class MainComponent implements OnInit {
   commentsToggle = false;
   likeToggle = new Array(100).fill(false);
   storageLikes!: any;
-  localStorageStories: any = []
+  localStories!: any;
 
   constructor(public utility: UtilityService, public router: Router) {}
 
   ngOnInit(): void {
-    let jsonRes = 
-    this.localStorageStories = localStorage.getItem('viewedStories')
+    // let jsonRes = localStorage.getItem('viewedStories');
+    // this.localStories = jsonRes ? JSON.parse(jsonRes) : undefined;
+    // console.log(this.localStories);
 
     // this.utility.checkCookies()
     if (localStorage.getItem('like') === null) {
@@ -38,6 +39,17 @@ export class MainComponent implements OnInit {
       });
 
       this.utility.users = param;
+      if (localStorage.getItem('viewedStories') === null) {
+        localStorage.setItem(
+          'viewedStories',
+          JSON.stringify(this.utility.users)
+        );
+      }
+
+      this.localStories = JSON.parse(
+        localStorage.getItem('viewedStories') || '{}'
+      );
+      this.utility.users = this.localStories;
       console.log(this.utility.users);
     });
 
@@ -87,8 +99,15 @@ export class MainComponent implements OnInit {
 
   onStoryClick(e: any, i: any) {
     console.log(e.target, 'indice', i);
-    this.utility.users[i].viewed = true;
-    localStorage.setItem('viewedStories', JSON.stringify(this.utility.users))
-    console.log(this.utility.users)
+    // this.utility.users[i].viewed = true;
+    this.localStories[i].viewed = true;
+
+    localStorage.setItem('viewedStories', JSON.stringify(this.utility.users));
+    console.log(this.utility.users);
+
+    // let element = document.getElementsByClassName
+    // let jsonRes = localStorage.getItem('viewedStories');
+    // this.localStories = jsonRes ? JSON.parse(jsonRes) : undefined;
+    // console.log(this.localStories);
   }
 }

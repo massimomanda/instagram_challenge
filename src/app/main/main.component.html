@@ -1,9 +1,9 @@
 <div class="stories-wrapper">
   <div class="story-container">
     <app-story
-      [class]="user.viewed == true ? 'viewed' : ''"
+      [class]="localStories[i]?.viewed == true ? 'viewed' : ''"
       (click)="onStoryClick($event, i)"
-      *ngFor="let user of utility.users; index as i"
+      *ngFor="let user of localStories; index as i"
       [id]="user.id"
       [username]="user.username"
     ></app-story>
