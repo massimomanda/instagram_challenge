@@ -1,7 +1,9 @@
 <div class="stories-wrapper">
   <div class="story-container">
     <app-story
-      *ngFor="let user of utility.users"
+      [class]="user.viewed == true ? 'viewed' : ''"
+      (click)="onStoryClick($event, i)"
+      *ngFor="let user of utility.users; index as i"
       [id]="user.id"
       [username]="user.username"
     ></app-story>

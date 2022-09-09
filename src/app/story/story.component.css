@@ -28,6 +28,10 @@ img {
   align-items: center;
 }
 
+.imageBackground.viewed {
+  background: rgb(151, 151, 151);
+}
+
 .userPics > img:hover {
   cursor: pointer;
 }

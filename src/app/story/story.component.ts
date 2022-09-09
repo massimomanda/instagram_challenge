@@ -15,6 +15,8 @@ export class StoryComponent implements OnInit {
   ) {}
 
   @Input('id') id!: number;
+  @Input('class') class!: any;
+
   @Input('username') username!: string;
 
   ngOnInit(): void {}
