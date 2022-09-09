@@ -14,14 +14,15 @@ export class MainComponent implements OnInit {
   commentsToggle = false;
   likeToggle = new Array(100).fill(false);
   storageLikes!: any;
+  localStorageStories: any = []
 
   constructor(public utility: UtilityService, public router: Router) {}
 
   ngOnInit(): void {
+    this.localStorageStories = localStorage.getItem('viewedStories')
+
     // this.utility.checkCookies()
-    if (
-      localStorage.getItem('like') === null
-    ) {
+    if (localStorage.getItem('like') === null) {
       localStorage.setItem('like', JSON.stringify(this.likeToggle));
     }
 
@@ -29,7 +30,12 @@ export class MainComponent implements OnInit {
       this.utility.posts = elem;
       console.log(elem);
     });
-    this.utility.getUser().subscribe((param) => {
+
+    this.utility.getUser().subscribe((param: any) => {
+      param.forEach((el: any) => {
+        el.viewed = false;
+      });
+
       this.utility.users = param;
       console.log(this.utility.users);
     });
@@ -76,5 +82,12 @@ export class MainComponent implements OnInit {
   deleteComment(index: number) {
     this.comments.splice(index, 1);
     console.log(index);
+  }
+
+  onStoryClick(e: any, i: any) {
+    console.log(e.target, 'indice', i);
+    this.utility.users[i].viewed = true;
+    localStorage.setItem('viewedStories', JSON.stringify(this.utility.users))
+    console.log(this.utility.users)
   }
 }
