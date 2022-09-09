@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
   constructor(public utility: UtilityService, public router: Router) {}
 
   ngOnInit(): void {
+    let jsonRes = 
     this.localStorageStories = localStorage.getItem('viewedStories')
 
     // this.utility.checkCookies()
