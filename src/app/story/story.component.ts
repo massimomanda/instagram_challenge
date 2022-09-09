@@ -20,4 +20,10 @@ export class StoryComponent implements OnInit {
   @Input('username') username!: string;
 
   ngOnInit(): void {}
+
+  onStoryClick() {
+    setTimeout(() => {
+      this.router.navigate(['/story-detail', this.id, this.username]);
+    }, 1);
+  }
 }

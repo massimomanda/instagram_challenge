@@ -18,7 +18,6 @@ export class AdminpageComponent implements OnInit {
 
   removeUser(index:number){
     this.utility.registeredUsers.splice(index,1)
-    console.log(this.utility.registeredUsers)
   }
 
 }

@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log(this.utility.registeredUsers) // for test
   }
   submitOnLoginForm(){
     this.utility.login(this.loginForm.value.numberOrEmail,this.loginForm.value.password)    

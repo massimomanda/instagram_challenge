@@ -33,13 +33,11 @@ export class StoryDetailComponent implements OnInit, AfterViewInit {
   @ViewChild('myBar') myBar!: ElementRef;
 
   ngOnInit(): void {
-    console.log('stringa');
 
     // this.move();
 
     this.route.params.subscribe((params) => {
       this.storyId = params;
-      console.log(this.storyId);
     });
 
     // this.interval = setInterval(() => this.timer(), 1000)
@@ -48,7 +46,6 @@ export class StoryDetailComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // this.elem = document.getElementById('myBar');
     // this.elem.style.width = '40%';
-    console.log(this.myBar);
     this.move();
     // this.myBar.nativeElement.style.width = this.larghezza + '%';
   }
@@ -59,7 +56,6 @@ export class StoryDetailComponent implements OnInit, AfterViewInit {
       this.larghezza = 6.66;
       // this.width = 1;
       this.start = Date.now();
-      console.log(this.start);
       this.id = setInterval(() => this.frame(), 1000);
     }
   }
@@ -68,7 +64,6 @@ export class StoryDetailComponent implements OnInit, AfterViewInit {
     if (this.larghezza >= 100) {
       clearInterval(this.id);
       this.router.navigate(['/main']);
-      console.log(Date.now() - this.start);
       this.i = 0;
     } else {
       this.larghezza += 6.66;
